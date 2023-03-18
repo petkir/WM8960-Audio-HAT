@@ -135,6 +135,7 @@ struct wm8960_priv {
 	int freq_in;
 	bool is_stream_in_use[2];
 	struct wm8960_data pdata;
+	ktime_t dsch_start;
 };
 
 #define wm8960_reset(c)	regmap_write(c, WM8960_RESET, 0)
